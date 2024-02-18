@@ -18,3 +18,9 @@
 ## Chapter 2. The Geometry of Linear Programming
 
 [Chapter2.html](https://htmlpreview.github.io/?https://github.com/chofchof/linear-optimization/blob/main/Chapter2.html)
+
+
+
+## Chapter 3. The Simplex Method
+
+[Chapter3.html](https://htmlpreview.github.io/?https://github.com/chofchof/linear-optimization/blob/main/Chapter3.html)
