@@ -12,4 +12,9 @@
 
 - **Introduction to Linear Optimization** (1997)
   - Athena Scientific, Belmont, Massachusetts, ISBN 1-886529-19-1
- 
+
+
+
+## Chapter 2. The Geometry of Linear Programming
+
+[Chapter2.html](https://htmlpreview.github.io/?https://github.com/chofchof/linear-optimization/blob/main/Chapter2.html)
