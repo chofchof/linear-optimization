@@ -15,6 +15,12 @@
 
 
 
+## Chapter 1. Introduction
+
+[Chapter1.html](https://htmlpreview.github.io/?https://github.com/chofchof/linear-optimization/blob/main/Chapter1.html)
+
+
+
 ## Chapter 2. The Geometry of Linear Programming
 
 [Chapter2.html](https://htmlpreview.github.io/?https://github.com/chofchof/linear-optimization/blob/main/Chapter2.html)
