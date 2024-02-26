@@ -278,8 +278,8 @@ Regarding the determination of the **exiting** column $\mathbf{A}_{B_l}$ and the
 
 It is customary to augment the simplex tableau by including a top row, called the **zeroth row**:
 
-- The first entry is the negative of the current cost, $-\mathbf{c}^T\mathbf{x}=-\mathbf{c}_B^T\mathbf{x}_B=-\mathbf{c}_B^T(\mathbf{B}^{-1}\mathbf{b})$​.
-- The rest of the zeroth row is the row vector of reduced costs, $\mathbf{\bar c}^T=\mathbf{c}^T-\mathbf{c}_B^T(\mathbf{B}^{-1}\mathbf{A})$.
+- The first entry is the <u>negative of the current cost</u>, $-\mathbf{c}^T\mathbf{x}=-\mathbf{c}_B^T\mathbf{x}_B=-\mathbf{c}_B^T(\mathbf{B}^{-1}\mathbf{b})$​.
+- The rest of the zeroth row is the row vector of <u>reduced costs</u>, $\mathbf{\bar c}^T=\mathbf{c}^T-\mathbf{c}_B^T(\mathbf{B}^{-1}\mathbf{A})$.
 
 <img src="figures/LP_full_tableau_zeroth_row.png" style="zoom:50%;" />
 
