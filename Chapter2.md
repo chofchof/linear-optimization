@@ -40,6 +40,8 @@ The <u>feasible set</u> of any linear programming problem is a <u>polyhedron</u>
 
 We suggest three different ways of defining the <u>concept of a "corner"</u> and then show that all three definitions are equivalent.
 
+
+
 #### Extreme point
 
 Our first definition defines an *extreme point* of a polyhedron as <u>a point that cannot be expressed as a convex combination</u> of two other elements of the polyhedron; see Figure 2.4.
@@ -50,6 +52,8 @@ This definition is entirely <u>geometric</u> and does not refer to a specific re
 
 <img src="figures/LP_figure_2.4.png" style="zoom:50%;" />
 
+
+
 #### Vertex
 
 An alternative <u>geometric</u> definition defines a *vertex* of a polyhedron $P$ as <u>the unique optimal solution to some linear programming problem with feasible set</u> $P$.
@@ -59,6 +63,8 @@ An alternative <u>geometric</u> definition defines a *vertex* of a polyhedron $P
 In other words, $\mathbf{x}$ is a vertex of $P$ <u>if and only if</u> $P$ is on one side of a hyperplane $\{\mathbf{y}\in\mathbb{R}^n\mid\mathbf{c}^T\mathbf{y}=\mathbf{c}^T\mathbf{x}\}$ which meets $P$ only at $\mathbf{x}$; see Figure 2.5.
 
 <img src="figures/LP_figure_2.5.png" style="zoom: 50%;" />
+
+
 
 #### Basic feasible solution
 
@@ -141,6 +147,8 @@ Note that the property of <u>being a basic *feasible* solution</u> (algebraic) i
 >
 > _Proof._ Different basic solutions correspond to different sets of $n$ linearly independent active constraints.
 
+
+
 #### Adjacent basic solution
 
 Two <u>distinct basic solutions</u> in $\mathbb{R}^n$ are said to be **adjacent** if we can find $n-1$ linearly independent constraints that are active at both of them. In Figure 2.7, $D$ and $E$ are adjacent to $B$; also, $A$ and $C$ are adjacent to $D$​​.
@@ -197,9 +205,12 @@ The basic variables are determined by solving the equation $\mathbf{B}\mathbf{x}
   <img src="figures/LP_example_2.1.png" style="zoom:60%;" />
 </figure>
 
+
 #### Correspondence of bases and basic solutions
 
 Different basic solutions must correspond to different bases, because a basis <u>uniquely determines</u> a basic solution, i.e., {bases} $\to$ {basic solutions} is a map. However, two different bases may lead to the same basic solution, i.e., the map is not one-to-one.
+
+
 
 #### The full row rank assumption on $\mathbf{A}$
 
@@ -227,6 +238,7 @@ As long as the feasible set is nonempty, <u>a linear programming problem in stan
   <img src="figures/LP_example_2.4.png" style="zoom:60%;" />
 </figure>
 
+
 #### Degeneracy in standard form polyhedra
 
 > __Definition 2.11__ Let $P=\{\mathbf{x}\in\mathbb{R}^n\mid\mathbf{Ax}=\mathbf{b},\,\mathbf{x}\geq\mathbf{0}\}$ be a polyhedron in standard form where $\mathbf{A}$ is an $m\times n$ matrix. A <u>basic solution</u> $\mathbf{x}$ is called **degenerate** if more than $n-m$ of the components of $\mathbf{x}$ are zero.
@@ -236,6 +248,8 @@ As long as the feasible set is nonempty, <u>a linear programming problem in stan
 </figure>
 
 <img src="figures/LP_figure_2.11.png" style="zoom:50%;" />
+
+
 
 #### Degeneracy is not a purely geometric property
 

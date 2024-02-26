@@ -54,6 +54,8 @@ $$
 $$
 Thus $\mathbf{d}_B=(d_{B_1},\dotsc,d_{B_m})=-\mathbf{B}^{-1}\mathbf{A}_j\in\mathbb{R}^m$.
 
+
+
 #### Basic directions and feasible directions
 
 Let $\mathbf{x}$ be a <u>basic feasible solution</u>. For a <u>nonbasic</u> index $j\in N$, the $j$-th **basic direction** is defined by the nonzero vector $\mathbf{d}\in\mathbb{R}^n$ with $\mathbf{d}_B=-\mathbf{B}^{-1}\mathbf{A}_j$, and $d_j=1$ but $d_i=0$ for $i\neq j\in N$​.
@@ -67,6 +69,8 @@ Is the $j$-th <u>basic direction</u> always a <u>feasible direction</u>?
 - However, if $\mathbf{x}$ is <u>degenerate</u>, $\mathbf{d}$ is <u>not always a feasible direction</u>. ($\because$) If $x_{B_k}=0$ and $d_{B_k}<0$ for some basic variable $B_k$, then $x_{B_k}+\theta d_{B_k}<0$ for all $\theta>0$; see Figure 3.2.
 
 <img src="figures/LP_figure_3.2.png" style="zoom:50%;" />
+
+
 
 #### Reduced costs
 
@@ -158,6 +162,8 @@ Let us assume that <u>every basic feasible solution is nondegenerate</u>.
 > - (Step 2) We have an optimal basis $\mathbf{B}$ and an associated basic feasible solution which is optimal.
 > - (Step 3) We have found $\mathbf{d}\in\mathbb{R}^n$ satisfying $\mathbf{Ad}=\mathbf{0}$, $\mathbf{d}\geq\mathbf{0}$, $\mathbf{c}^T\mathbf{d}=\sum_{i\in N}\bar c_id_i=\bar c_j<0$, and the optimal cost is $-\infty$.
 
+
+
 #### B. The simplex method for degenerate problems
 
 The following new possibilities may be encountered in the course of the algorithm.
@@ -175,6 +181,8 @@ Basis changes while staying at $\mathbf{y}=\mathbf{x}$ (no cost reduction) are <
   <img src="figures/LP_figure_3.3.png" style="zoom:50%;" />
 
 - (**Cycling**) A sequence of basis changes might lead back to the initial basis, in which case the algorithm <u>may loop indefinitely</u>. (See Section 3.4.)
+
+
 
 #### Pivot Selection
 
@@ -205,6 +213,8 @@ The <u>main difference between alternative implementations</u> lies in the way t
 - Computing the <u>matrix-vector product</u> $\mathbf{Bb}$ takes $O(m^2)$ operations.
 - Computing the <u>inner product</u> $\mathbf{p}^T\mathbf{b}$ takes $O(m)$ operations.
 
+
+
 #### A. Naive implementation
 
 At the beginning of a typical iteration, we have a set $B=\{B_1,\dotsc,B_m\}$ of the current basic variables.
@@ -215,6 +225,8 @@ At the beginning of a typical iteration, we have a set $B=\{B_1,\dotsc,B_m\}$ of
 4. Determine $\theta^*$ and the **exit** column $\mathbf{A}_{B_l}$, and then construct the new basic feasible solution $\mathbf{y}$.
 
 The total computational effort per iteration is $O(m^3+mn)$.
+
+
 
 #### B. Revised simplex method
 
@@ -242,6 +254,7 @@ The total computational effort per iteration is $O(m^2+mn)$.
 <figure style="text-align: left; padding-top: .5em; padding-bottom: .5em;">
   <img src="figures/LP_example_3.4.png" style="zoom:60%;" />
 </figure>
+
 
 ### C. The full tableau implementation
 
@@ -302,6 +315,7 @@ The total computational effort per iteration is $O(mn)$.
   <img src="figures/LP_example_3.6.png" style="zoom:60%;" />
 </figure>
 
+
 #### Comparison of the full tableau and the revised simplex methods
 
 The revised simplex method is just a variant of the full tableau method, with more efficient bookkeeping. (See the book, p.106.)
@@ -350,6 +364,8 @@ Note that in order to apply the lexicographic pivoting rule, an initial tableau 
 
 - Assume that an initial tableau is available. Then rename the variables so that the basic variables are the first $m$ ones. This is equivalent to rearranging the tableau so that the first $m$ columns of $\mathbf{B}^{-1}\mathbf{A}$ are the $m$ unit vectors. The resulting tableau has lexicographically positive rows.
 
+
+
 #### Bland's rule
 
 > __Smallest subscript pivoting rule__
@@ -367,6 +383,8 @@ Under the smallest subscript pivoting rule, it is known that <u>cycling never oc
 
 In general, finding an initial basic feasible solution is <u>not easy</u> and requires the solution of an auxiliary linear programming problem.
 
+
+
 #### Auxiliary linear programming problem
 
 We may assume, without loss of generality, that $\mathbf{b}\geq\mathbf{0}$ by multiplying some of the equality constraint by $-1$. We introduce $\mathbf{y}=(y_1,\dotsc,y_m)\in\mathbb{R}^m$ of **artificial variables** and use the simplex method to solve the auxiliary problem:
@@ -383,6 +401,8 @@ $$
 - <u>A feasible solution exists to the original problem if and only if a zero cost solution exists to the auxiliary problem</u>. ($\Rightarrow$) If $\mathbf{x}$ is a feasible solution to the original problem, this choice of $\mathbf{x}$ together with $\mathbf{y}=\mathbf{0}$, yields a zero cost solution to the auxiliary problem. ($\Leftarrow$) If we obtain a zero cost solution to the auxiliary problem, we must have $\mathbf{y}=\mathbf{0}$ and thus $\mathbf{x}$​ is a feasible solution to the original problem.
 - Therefore, <u>if the optimal cost in the auxiliary problem is nonzero, the original problem is infeasible</u>.
 
+
+
 #### Driving artificial variables out of the basis
 
 The situation is <u>more complex</u> if (1) the original problem is feasible, (2) the simplex method applied to the auxiliary problem terminates with a feasible solution $\mathbf{x}^*$ to the original problem, but (3) some of the artificial variables are in the final basis. (Since the final value of $\mathbf{y}$ is zero, this implies that we have a <u>degenerate basic feasible solution</u> to the auxiliary problem.)
@@ -390,6 +410,8 @@ The situation is <u>more complex</u> if (1) the original problem is feasible, (2
 <figure style="text-align: left; padding-top: .5em; padding-bottom: .5em;">
   <img src="figures/LP_example_3.8.png" style="zoom:60%;" />
 </figure>
+
+
 #### The two-phase simplex method
 
 We can now summarize a <u>complete algorithm for linear programming problems in standard form</u>.
@@ -413,6 +435,8 @@ We can now summarize a <u>complete algorithm for linear programming problems in 
 - If the optimal cost is equal to $-\infty$, this is detected while running **Phase II**.
 - Else, **Phase II** terminates with an <u>optimal solution</u>.
 
+
+
 #### The big-$M$​ method
 
 The idea is to introduce a cost function of the form $\mathbf{c}^T\mathbf{x}+M\cdot\mathbf{1}^T\mathbf{y}$, where $M$ is a large positive constant.
@@ -434,6 +458,8 @@ The idea is to introduce a cost function of the form $\mathbf{c}^T\mathbf{x}+M\c
 > 1. The feasible set has $2^n$ vertices.
 > 2. The vertices can be ordered so that each one is adjacent to and has lower cost than the previous one.
 > 3. There exists a pivoting rule under which the simplex method requires $2^n-1$ changes of basis before it terminates.
+
+
 
 #### The diameter of polyhedra and the Hirsch conjecture
 
@@ -461,6 +487,7 @@ In order to have any hope of developing pivoting rules under which the simplex m
   $$
   \Delta(n,m) \leq \Delta_u(n,m) < m^{1+\log_2n} = (2n)^{\log_2m}.
   $$
+
 
 
 #### The average case behavior of the simplex method

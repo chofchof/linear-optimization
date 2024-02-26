@@ -62,6 +62,8 @@ A feasible solution $\mathbf{x}^*$ that <u>minimizes</u> the objective function 
 
 <u>No need to study maximization problems</u>: Maximizing $\mathbf{c}^T\mathbf{x}$ is equivalent to minimizing $-\mathbf{c}^T\mathbf{x}$​.
 
+
+
 #### General form
 
 A **linear programming problem in general form** is
@@ -84,6 +86,8 @@ where $\mathbf{b}=(b_1,\dotsc,b_m)\in\mathbb{R}^m$ and $\mathbf{A}$ is the $m\ti
 We say that two problems are **equivalent** if, given a <u>feasible solution to one problem</u>, we can construct a <u>feasible solution to the other, with the same cost</u>.
 
 In particular, two equivalent problems have the same optimal cost, and given an optimal solution to one problem, we can construct an optimal solution to the other.
+
+
 
 #### Standard form
 

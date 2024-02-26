@@ -30,3 +30,9 @@
 ## Chapter 3. The Simplex Method
 
 [Chapter3.html](https://htmlpreview.github.io/?https://github.com/chofchof/linear-optimization/blob/main/Chapter3.html)
+
+
+
+## Chapter 4. Duality Theory
+
+[Chapter4.html](https://htmlpreview.github.io/?https://github.com/chofchof/linear-optimization/blob/main/Chapter4.html)
